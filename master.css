@@ -8,10 +8,15 @@ body{
   margin: 0;
   background: hsl(233, 47%, 7%);
   font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 img{
   max-width:100%;
+  object-fit: cover;
   border-top-right-radius: .5rem;
   border-top-left-radius: .5rem;
 }
@@ -42,6 +47,11 @@ ul{
 
 .image>picture{
   filter: opacity(50%);
+}
+
+.image source{
+  height: 100%;
+  object-fit: cover
 }
 
 
@@ -75,6 +85,14 @@ ul{
 .cotent__list h3{
   color: hsl(0, 0%, 100%);
   font-weight: 700;
+}
+
+
+@media (min-width: 700px) and (max-width:1050px) {
+  img{
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 @media (min-width: 700px) {
